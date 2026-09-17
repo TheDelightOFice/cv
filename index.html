@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CV Assignment</title>
+    <!-- FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+    <style>
+        * { box-sizing: border-box; transition: 0.35s ease; }
+
+.rela-block {
+    display: block;
+    position: relative;
+    margin: auto;
+}
+.rela-inline {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+}
+.floated {
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+.abs-center {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 88%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    line-height: 28px;
+    background: url('http://kingofwallpapers.com/leaves/leaves-016.jpg') right no-repeat;
+    background-size: cover;
+}
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.92);
+}
+
+.caps { text-transform: uppercase; }
+.justified { text-align: justify; }
+p.light { color: #777; }
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    line-height: 40px;
+    color: black;
+}
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    line-height: 28px;
+    color: black;
+}
+
+.page {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto;
+    background-color: white;
+    box-shadow: 6px 10px 28px 0px rgba(0,0,0,0.4);
+    display: block;
+    position: relative;
+}
+.top-bar {
+    height: 220px;
+    background-color: #848484;
+    color: white;
+    display: block;
+    position: relative;
+    margin: auto;
+}
+.name {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: calc(350px + 5%);
+    height: 120px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 58px;
+    letter-spacing: 8px;
+    font-weight: 100;
+    line-height: 60px;
+}
+.name div { width: 94%; }
+
+.side-bar {
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 5%;
+    width: 350px;
+    background-color: #F7E0C1;
+    padding: 320px 30px 50px;
+    display: block;
+    margin: auto;
+}
+.mugshot {
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    height: 210px;
+    width: 210px;
+    display: block;
+    margin: auto;
+}
+.mugshot .logo { margin: -23px; }
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    margin: 0;
+    color: black;
+    height: 250px;
+    width: 250px;
+    display: block;
+}
+.logo .logo-svg {
+    height: 100%;
+    width: 100%;
+    stroke: black;
+    cursor: pointer;
+}
+.logo .logo-text {
+    position: absolute;
+    top: 58px;
+    left: 40px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-size: 55px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    line-height: 58px;
+}
+
+.social {
+    padding-left: 60px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.social:before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    height: 25px;
+    width: 25px;
+    background-size: cover !important;
+}
+.social.email:before { background: url('https://cdn-icons-png.magnific.com/512/347/347722.png') center no-repeat; }
+.social.phone:before { background: url('https://cdn-icons-png.magnific.com/512/171/171548.png') center no-repeat; }
+.social.area:before { background: url('https://cdn-icons-png.magnific.com/512/3892/3892704.png') center no-repeat; }
+
+.side-header {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 70px auto 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #888;
+    display: block;
+    position: relative;
+}
+.list-thing {
+    padding-left: 25px;
+    margin-bottom: 10px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-container {
+    margin-right: 0;
+    width: calc(95% - 350px);
+    padding: 25px 40px 50px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+}
+.content-container > * { margin: 0 auto 25px; }
+.content-container > h3 { margin: 0 auto 5px; }
+.content-container > p.long-margin { margin: 0 auto 50px; }
+
+.title { width: 80%; text-align: center; display: block; position: relative; margin: auto; }
+.separator {
+    width: 240px;
+    height: 2px;
+    background-color: #999;
+    display: block;
+    position: relative;
+    margin: auto;
+}
+.greyed {
+    background-color: #DDD;
+    width: 100%;
+    max-width: 580px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 6px;
+    font-weight: 600;
+    line-height: 28px;
+    display: block;
+    position: relative;
+    margin: auto;
+}
+
+@media screen and (max-width: 1150px) {
+    .name {
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        font-size: 38px;
+        letter-spacing: 6px;
+        font-weight: 100;
+        line-height: 48px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- FONTS -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+<!-- PAGE STUFF -->
+<div class="rela-block page">
+    <div class="rela-block top-bar">
+        <div class="caps name"><div class="abs-center">Hussein Mohammad Mahsun</div></div>
+    </div>
+    <div class="side-bar">
+    <div class="mugshot">
+        <div class="logo">
+            <svg viewBox="0 0 80 80" class="rela-block logo-svg">
+                <!-- 1. Define the clipping shape using your exact path code -->
+                <clipPath id="photoClip">
+                    <path d="M 10 10 L 52 10 L 72 30 L 72 70 L 30 70 L 10 50 Z" />
+                </clipPath>
+                
+                <!-- 2. Put your photo here and crop it to the clip path -->
+                <image href="selfie.jpeg" width="80" height="80" y="-10" preserveAspectRatio="xMidYMid slice" clip-path="url(#photoClip)" />
+                
+                <!-- 3. Keep the original border path on top so the black outline stays visible -->
+                <path d="M 10 10 L 52 10 L 72 30 L 72 70 L 30 70 L 10 50 Z" stroke-width="2.5" fill="none" stroke="black" />
+            </svg>
+        </div>
+    </div>
+        <p class="rela-block social area">Surabaya, Indonesia</p>
+        <p class="rela-block social phone">+62 822-2190-2882</p>
+        <p class="rela-block social email">5025251170@student.its.ac.id</p>
+        <p class="rela-block caps side-header">Expertise</p>
+        <p class="rela-block list-thing">osu!</p>
+        <p class="rela-block list-thing">HTML & CSS3</p>
+        <p class="rela-block list-thing">JavaScript Basics</p>
+        <p class="rela-block list-thing">C Programming Basics</p>
+        <p class="rela-block caps side-header">Education</p>
+        <p class="rela-block list-thing">Sepuluh Nopember Institute of Technology</p>
+        <p class="rela-block list-thing">Informatics Engineering</p>
+        <p class="rela-block list-thing">Web Programming Coursework</p>
+        <p class="rela-block list-thing">Clicking Notes</p>
+        <p class="rela-block caps side-header">Language Skills</p>
+        <p class="rela-block list-thing">English (Fluent)</p>
+        <p class="rela-block list-thing">Indonesia (Intermediate)</p>
+        <p class="rela-block list-thing">Japanese (Beginner)</p>
+        <p class="rela-block list-thing">Arabic (Beginner)</p>
+    </div>
+    <div class="rela-block content-container">
+        <h2 class="rela-block caps title">Web Developer</h2>
+        <div class="rela-block separator"></div>
+        <div class="rela-block caps greyed">Profile</div><br>
+        <p class="long-margin">ITS student building a strong foundation in front-end development through coursework and practical coding projects. Eager to apply academic knowledge in HTML, CSS, and JavaScript to gain experience in web development.</p>
+        <div class="rela-block caps greyed">Activities</div><br>
+
+        <h3>IFLS Rhythm Game Community Collaboration Video</h3>
+        <p class="light">Participant</p>
+        <p class="justified">Performed gameplay sequences across multiple rhythm game titles for a community mashup video set to a single track, contributing to a collaborative project and promoting the community</p>
+        
+        <h3>Personal Portfolio Website</h3>
+        <p class="light">HTML & CSS Project</p>
+        <p class="justified">Built a structured, multi-column layout using standard HTML tags and styled it with custom CSS to present personal profile details and extracurricular activities in a clean format.</p>
+        
+        <h3>Organized Community Event</h3>
+        <p class="light">Extracurricular Activities</p>
+        <p class="justified">Participated in a large-scale supervised 5km run alongside hundreds of community members. Maintained a strong, steady pace from start to finish to complete the course and place within the top 20 participants.</p>
+
+        <div class="rela-block caps greyed">Hobbies & Personal Interests</div><br>
+
+        <h3>Rhythm Gaming</h3>
+        <p class="light">Pattern Recognition & Precision</p>
+        <p class="justified">Passionate about rhythm-based games that require strict physical timing, and rapid pattern recognition. Enjoy mastering complex charts and continuously pushing personal limits for accuracy and speed.</p>
+
+    </div>
+</div>
+    <div class="rela-block page">
+        
+    </div>
+</body>
+</html>
